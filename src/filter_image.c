@@ -150,10 +150,12 @@ image make_emboss_filter()
 }
 
 // Question 2.2.1: Which of these filters should we use preserve when we run our convolution and which ones should we not? Why?
-// Answer: TODO
+// Answer:  filters like box filter, Gaussian filter, and Sobel filter should be used with preserve = 0 to obtain grayscale 
+//images with specific features, while filters like sharpen and emboss filters should be used with preserve = 1 to
+//preserve the color information while enhancing specific aspects of the image.
 
 // Question 2.2.2: Do we have to do any post-processing for the above filters? Which ones and why?
-// Answer: TODO
+// Answer: We can use post-processing for highpass filter, i.e. we can smoothen the image first to get better edge detection.
 
 image make_gaussian_filter(float sigma)
 
